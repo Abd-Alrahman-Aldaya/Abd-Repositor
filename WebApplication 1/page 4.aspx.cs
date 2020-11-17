@@ -12,7 +12,9 @@ namespace WebApplication_1
         protected void Page_Load(object sender, EventArgs e)
         {
             string name = Request.QueryString.Get("name");
-            Response.Write("Hello " + name);
+           Response.Write("Hello " + name+ " by QueryString <br>");
+            String Name = (String) Session["Name"];
+             Response.Write(Name+" by session");
         }
     }
 }
